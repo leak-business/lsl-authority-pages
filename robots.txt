@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Disallow: /Pushed%20to%20Github/
+Disallow: /LSL_Questions/
+Disallow: /Duplicates/
+
+# AI crawlers welcome to cite us
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+Sitemap: https://learn.leakandsubsurfacelocators.com/sitemap.xml
