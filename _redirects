@@ -1,2 +1,30 @@
 /free-guide https://stan.store/leakbusinessacademy/p/stop-guessing-pool-leaks-beginner-guide 301
 /water-loss-calculator https://stan.store/leakbusinessacademy/p/free-evaporation-calculator 301
+
+# ---------------------------------------------------------------------------
+# Block internal working files and duplicate copies from the public site.
+#
+# These paths were publicly readable and returned 200. robots.txt alone did NOT
+# stop them, for two reasons: a Disallow only asks a crawler not to index a
+# file (anyone with the URL still gets it), and the existing robots rules used
+# capitalised paths while Netlify serves these lowercased, so they never
+# matched anything. These rules return a real 404 instead.
+#
+# Both letter cases are listed because redirect matching is case sensitive.
+# Nothing is deleted: the originals stay in the repo and in
+# G:\LSL Authority Pages\lsl-authority-pages.
+# ---------------------------------------------------------------------------
+
+# Internal content-planning notes (they expose the editorial process)
+/lsl_questions/*        /404.html  404
+/LSL_Questions/*        /404.html  404
+/readme.md              /404.html  404
+/README.md              /404.html  404
+
+# Staging and duplicate copies of the answer pages. Serving the same article at
+# more than one URL splits ranking signals, and these copies additionally carry
+# a canonical pointing at the apex domain rather than learn.*
+/pushed%20to%20github/* /404.html  404
+/Pushed%20to%20Github/* /404.html  404
+/duplicates/*           /404.html  404
+/Duplicates/*           /404.html  404

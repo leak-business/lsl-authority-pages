@@ -1,8 +1,11 @@
+# Note: the internal notes and duplicate page folders that used to be listed
+# here are now blocked with real 404s in _redirects. Two reasons the Disallow
+# lines were removed rather than corrected: they never worked (they used
+# capitalised paths while Netlify serves those URLs lowercased, and robots
+# matching is case sensitive), and robots.txt is public, so naming a private
+# path here just advertises what to go looking for.
 User-agent: *
 Allow: /
-Disallow: /Pushed%20to%20Github/
-Disallow: /LSL_Questions/
-Disallow: /Duplicates/
 
 # AI crawlers welcome to cite us
 User-agent: GPTBot
